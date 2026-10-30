@@ -47,3 +47,10 @@ body{-webkit-font-smoothing:antialiased}section{margin-top:46px}
 .skill:hover .skill-tooltip,.skill:focus-visible .skill-tooltip{opacity:1;visibility:visible;transform:translate(-50%,0)}
 .skill-tooltip:after{content:'';position:absolute;top:100%;left:50%;margin-left:-4px;border:4px solid transparent;border-top-color:#fafafa}
 @media(max-width:540px){.avatar{width:80px;height:80px}.skill-tooltip{max-width:150px}.skills .skill:first-child .skill-tooltip{left:0;transform:translate(0,4px)}.skills .skill:first-child:hover .skill-tooltip,.skills .skill:first-child:focus-visible .skill-tooltip{transform:translate(0,0)}}
+
+#contact .hello-link{display:inline-block;color:var(--text-muted);text-decoration:none;transition:transform .2s ease,color .2s ease}
+#contact .hello-link span{color:#2897ff;transition:color .2s ease}
+#contact .hello-link:hover,#contact .hello-link:focus-visible{color:var(--fg);transform:translateY(-3px);text-decoration:none}
+#contact .hello-link:hover span,#contact .hello-link:focus-visible span{color:#65b5ff}
+#about > .text-link{display:inline-block;margin-top:20px;padding:4px 0;font-size:15px;font-weight:600;color:var(--fg);text-decoration:underline;text-decoration-color:#888;text-underline-offset:6px;text-decoration-thickness:1px;transition:transform .2s ease,color .2s ease,text-decoration-color .2s ease}
+#about > .text-link:hover,#about > .text-link:focus-visible{transform:translateY(-3px);color:#65b5ff;text-decoration-color:#65b5ff}

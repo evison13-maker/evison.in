@@ -12,27 +12,10 @@ themeButton.addEventListener('click', () => {
   updateThemeLabel();
 });
 updateThemeLabel();
-const skillDescriptions = {
-  JavaScript: 'Interactive websites and browser logic',
-  TypeScript: 'Type-safe JavaScript applications',
-  Python: 'Scripting, automation, and backend development',
-  'Next.js': 'Full-stack React applications',
-  React: 'Component-based user interfaces',
-  PostgreSQL: 'Relational data and SQL queries',
-  SQLite: 'Lightweight embedded SQL databases',
-  MongoDB: 'Flexible document databases',
-  Docker: 'Containerized applications and development environments',
-  Redis: 'In-memory caching and fast data access'
-};
 for (const skill of window.PROFILE.skills) {
   const badge = document.createElement('span'); badge.className = 'skill';
   badge.textContent = skill;
   badge.tabIndex = 0;
-  const tooltip = document.createElement('span');
-  tooltip.className = 'skill-tooltip'; tooltip.id = `skill-tip-${skill.replace(/[^a-z]/gi, '').toLowerCase()}`;
-  tooltip.setAttribute('role', 'tooltip'); tooltip.textContent = skillDescriptions[skill] || skill;
-  badge.setAttribute('aria-describedby', tooltip.id);
-  badge.append(tooltip);
   document.querySelector('#skill-list').append(badge);
 }
 function validUrl(value) { try { const url = new URL(value); return ['https:', 'http:'].includes(url.protocol) ? url.href : null; } catch { return null; } }
